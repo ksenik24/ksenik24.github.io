@@ -1,0 +1,147 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RAVI ILI AVI — UGC и контент-креатор</title><meta name="description" content="Портфолио RAVI ILI AVI — beauty, UGC, креативный макияж, персонажи и editorial-контент."><style>
+:root{--bg:#080607;--panel:#120b0e;--text:#f7efeb;--muted:#b9aaa4;--accent:#7d1825;--accent2:#c16b62;--line:#ffffff1a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.5}a{color:inherit;text-decoration:none}
+.container{width:min(1180px,92%);margin:auto}nav{position:fixed;z-index:20;top:0;left:0;right:0;padding:18px 0;background:#090708cc;backdrop-filter:blur(12px)}
+.nav-in{display:flex;justify-content:space-between;align-items:center}.logo{font-weight:800;letter-spacing:.16em;font-size:14px}.navlinks{display:flex;gap:22px;font-size:12px;color:#ddd}.navlinks a:hover{color:#d28b84}
+.hero{min-height:100vh;display:grid;align-items:end;position:relative;overflow:hidden;padding:100px 0 80px}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#090708 0%,#09070855 50%,#09070815),linear-gradient(0deg,#090708 0%,transparent 58%);z-index:1}.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}.hero-content{position:relative;z-index:2}
+.kicker,.eyebrow{letter-spacing:.25em;text-transform:uppercase;font-size:11px;color:#d49b93}h1{font-size:clamp(50px,9vw,112px);line-height:.88;letter-spacing:-.05em;margin:18px 0}.hero p{font-size:20px;color:#eee}
+.buttons{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.btn{padding:13px 19px;border:1px solid var(--line);border-radius:999px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;background:#ffffff0a}.btn.primary{background:var(--accent);border-color:var(--accent)}
+section{padding:100px 0}h2{font-size:clamp(36px,5vw,64px);line-height:1;margin:10px 0 20px}.lead{max-width:720px;color:var(--muted);font-size:18px}.stats{display:grid;grid-template-columns:repeat(3,1fr);margin-top:40px;background:var(--line);gap:1px}.stat{background:var(--bg);padding:30px}.stat strong{display:block;font-size:36px}.stat span{color:var(--muted);font-size:13px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:30px 0 18px}.filter{border:1px solid var(--line);background:transparent;color:#ddd;border-radius:999px;padding:10px 15px;cursor:pointer}.filter.active{background:var(--accent);border-color:var(--accent)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.gallery-item{border:0;padding:0;background:#000;cursor:pointer;overflow:hidden;aspect-ratio:3/4}.gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:.45s}.gallery-item:hover img{transform:scale(1.04);filter:brightness(.78)}
+.video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}.video-card{background:var(--panel);border:1px solid var(--line);overflow:hidden}.video-wrap{background:#000;aspect-ratio:9/16}.video-wrap video{width:100%;height:100%;display:block;object-fit:cover}.video-meta{padding:15px 16px 18px}.video-meta span{display:block;color:#d49b93;font-size:10px;text-transform:uppercase;letter-spacing:.16em;margin-bottom:5px}.video-meta b{font-size:14px;font-weight:600}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:35px}.card{background:var(--panel);border:1px solid var(--line);padding:27px;min-height:150px}.card b{font-size:17px}.card p{font-size:14px;color:var(--muted)}
+.socials{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:35px}.social{background:#100a0c;border:1px solid var(--line);padding:26px}.social small{display:block;color:var(--muted);margin-bottom:8px}.social strong{font-size:20px}
+.contact{background:linear-gradient(135deg,#180b0f,#090708);border-top:1px solid var(--line)}footer{padding:28px 0;color:#847874;font-size:12px}
+.lightbox{position:fixed;inset:0;background:#000e;z-index:30;display:none;align-items:center;justify-content:center;padding:20px}.lightbox.show{display:flex}.lightbox img{max-width:92vw;max-height:90vh}.close{position:absolute;right:22px;top:18px;border:0;background:#ffffff18;color:#fff;border-radius:50%;width:45px;height:45px;font-size:28px}
+@media(max-width:800px){.navlinks{display:none}.stats,.socials{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.gallery,.video-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:500px){.cards{grid-template-columns:1fr}.gallery,.video-grid{grid-template-columns:1fr}section{padding:75px 0}.hero{padding-bottom:60px}.hero p{font-size:17px}}
+</style>
+<style id="hero-title-position-fix">
+@media (min-width: 701px) {
+  .hero-content {
+    width: min(1180px, 92%);
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 52%;
+    box-sizing: border-box;
+  }
+  .hero-content h1 {
+    max-width: 560px;
+  }
+}
+.manager-contact {
+  margin-top: 22px;
+  color: #ddd;
+  font-size: 14px;
+}
+.manager-contact span {
+  color: #d49b93;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: 11px;
+}
+@media (max-width: 700px) {
+  .hero-content { padding-right: 0; }
+  .manager-contact { font-size: 13px; }
+}
+</style>
+
+
+<style id="photo-loading-fix">
+.gallery-item img {
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  background:#120b0e;
+}
+</style>
+
+</head><body>
+<nav><div class="container nav-in"><a class="logo" href="#">RAVI ILI AVI</a><div class="navlinks"><a href="#about">ОБО МНЕ</a><a href="#portfolio">ПОРТФОЛИО</a><a href="#collab">СОТРУДНИЧЕСТВО</a><a href="#contact">КОНТАКТЫ</a></div></div></nav>
+<header class="hero"><img decoding="async" src="images/portfolio-06.jpeg" alt="RAVI ILI AVI"><div class="container hero-content"><div class="kicker">UGC & контент-креатор</div><h1>ВИЗУАЛЫ,<br>КОТОРЫЕ<br>ЗАПОМИНАЮТСЯ.</h1><p>Макияж · Beauty · Cosplay · Трансформации</p><div class="buttons"><a class="btn primary" href="#portfolio">Смотреть портфолио</a><a class="btn" href="#contact">Сотрудничество</a></div></div></header>
+<section id="about"><div class="container"><div class="eyebrow">Обо мне</div><h2>От beauty до fantasy.</h2><p class="lead">Создаю визуально яркий контент, который превращает продукт или идею в запоминающуюся историю — от beauty-съёмок и UGC до креативного макияжа, персонажей и трансформаций.</p><div class="stats"><div class="stat"><strong>20,8K</strong><span>подписчиков в TikTok</span></div><div class="stat"><strong>3,7K</strong><span>подписчиков в Instagram</span></div><div class="stat"><strong>3</strong><span>основные площадки</span></div></div></div></section>
+<section id="portfolio"><div class="container"><div class="eyebrow">Избранные работы</div><h2>Портфолио</h2><p class="lead">Фото и видео собраны прямо на сайте. Видео открываются и воспроизводятся внутри страницы — без переходов на Яндекс Диск.</p>
+<h3 style="margin:45px 0 10px;font-size:28px">Видео</h3><div class="filters" id="videoFilters"><button class="filter active" data-filter="all">Все видео</button><button class="filter" data-filter="Beauty & UGC">Beauty & UGC</button><button class="filter" data-filter="Креативный макияж">Креативный макияж</button><button class="filter" data-filter="Персонажи">Персонажи</button><button class="filter" data-filter="Editorial">Editorial</button></div>
+<div class="video-grid"><article class="video-card" data-vcat="Beauty &amp; UGC">
+      <div class="video-wrap"><video controls playsinline preload="metadata" poster="video-posters/dd5fe9c4dbd9430b9226acb12ef1c3a6.jpg"><source src="videos/dd5fe9c4dbd9430b9226acb12ef1c3a6.mp4" type="video/mp4"></video></div>
+      <div class="video-meta"><span>Beauty &amp; UGC</span><b>Beauty-контент</b></div>
+    </article>
+<article class="video-card" data-vcat="Персонажи">
+      <div class="video-wrap"><video controls playsinline preload="metadata" poster="video-posters/v14044g50000cp30qjfog65gl888e6bg.jpg"><source src="videos/v14044g50000cp30qjfog65gl888e6bg.mp4" type="video/mp4"></video></div>
+      <div class="video-meta"><span>Персонажи</span><b>Персонажный образ</b></div>
+    </article>
+<article class="video-card" data-vcat="Beauty &amp; UGC">
+      <div class="video-wrap"><video controls playsinline preload="metadata" poster="video-posters/f9666ff1ca81447aab2b69b466a51a84.jpg"><source src="videos/f9666ff1ca81447aab2b69b466a51a84.mp4" type="video/mp4"></video></div>
+      <div class="video-meta"><span>Beauty &amp; UGC</span><b>Beauty / продукт</b></div>
+    </article>
+<article class="video-card" data-vcat="Beauty &amp; UGC">
+      <div class="video-wrap"><video controls playsinline preload="metadata" poster="video-posters/copy_69E0692E-4ECC-4A0A-82EB-8D4154EB1747.jpg"><source src="videos/copy_69E0692E-4ECC-4A0A-82EB-8D4154EB1747.mp4" type="video/mp4"></video></div>
+      <div class="video-meta"><span>Beauty &amp; UGC</span><b>UGC / продукт</b></div>
+    </article>
+<article class="video-card" data-vcat="Креативный макияж">
+      <div class="video-wrap"><video controls playsinline preload="metadata" poster="video-posters/v10044g50000cpe37rnog65ms57hf9s0.jpg"><source src="videos/v10044g50000cpe37rnog65ms57hf9s0.mp4" type="video/mp4"></video></div>
+      <div class="video-meta"><span>Креативный макияж</span><b>Креативный образ</b></div>
+    </article>
+<article class="video-card" data-vcat="Editorial">
+      <div class="video-wrap"><video controls playsinline preload="metadata" poster="video-posters/4f49be0dd4f6499fb0f43972f7aed613.jpg"><source src="videos/4f49be0dd4f6499fb0f43972f7aed613.mp4" type="video/mp4"></video></div>
+      <div class="video-meta"><span>Editorial</span><b>Editorial / beauty</b></div>
+    </article>
+<article class="video-card" data-vcat="Beauty &amp; UGC">
+      <div class="video-wrap"><video controls playsinline preload="metadata" poster="video-posters/copy_D5B758C7-D7C8-4908-8194-B6DA3CD17A9B.jpg"><source src="videos/copy_D5B758C7-D7C8-4908-8194-B6DA3CD17A9B.mp4" type="video/mp4"></video></div>
+      <div class="video-meta"><span>Beauty &amp; UGC</span><b>Beauty / демонстрация</b></div>
+    </article>
+<article class="video-card" data-vcat="Креативный макияж">
+      <div class="video-wrap"><video controls playsinline preload="metadata" poster="video-posters/v14044g50000coididnog65gmhpp6veg.jpg"><source src="videos/v14044g50000coididnog65gmhpp6veg.mp4" type="video/mp4"></video></div>
+      <div class="video-meta"><span>Креативный макияж</span><b>Makeup transformation</b></div>
+    </article>
+<article class="video-card" data-vcat="Креативный макияж">
+      <div class="video-wrap"><video controls playsinline preload="metadata" poster="video-posters/f0e95beae36f4b818ba31a53e48ff37e (1).jpg"><source src="videos/f0e95beae36f4b818ba31a53e48ff37e (1).mp4" type="video/mp4"></video></div>
+      <div class="video-meta"><span>Креативный макияж</span><b>Cry Baby makeup</b></div>
+    </article>
+<article class="video-card" data-vcat="Персонажи">
+      <div class="video-wrap"><video controls playsinline preload="metadata" poster="video-posters/c564ca3c99fe4433a373ac214254f528.jpg"><source src="videos/c564ca3c99fe4433a373ac214254f528.mp4" type="video/mp4"></video></div>
+      <div class="video-meta"><span>Персонажи</span><b>Spider-Man inspired</b></div>
+    </article>
+<article class="video-card" data-vcat="Beauty &amp; UGC">
+      <div class="video-wrap"><video controls playsinline preload="metadata" poster="video-posters/v1c044g50000d7ea8lvog65lmv9adoeg.jpg"><source src="videos/v1c044g50000d7ea8lvog65lmv9adoeg.mp4" type="video/mp4"></video></div>
+      <div class="video-meta"><span>Beauty &amp; UGC</span><b>UGC / beauty</b></div>
+    </article>
+<article class="video-card" data-vcat="Editorial">
+      <div class="video-wrap"><video controls playsinline preload="metadata" poster="video-posters/5495713a6fc0446abba468aea4a47978.jpg"><source src="videos/5495713a6fc0446abba468aea4a47978.mp4" type="video/mp4"></video></div>
+      <div class="video-meta"><span>Editorial</span><b>Editorial / transformation</b></div>
+    </article></div>
+<h3 style="margin:70px 0 10px;font-size:28px">Фотографии</h3><div class="filters" id="photoFilters"><button class="filter active" data-filter="all">Все работы</button><button class="filter" data-filter="beauty">Beauty & UGC</button><button class="filter" data-filter="fantasy">Fantasy</button><button class="filter" data-filter="creative">Креативный макияж</button><button class="filter" data-filter="characters">Персонажи</button><button class="filter" data-filter="editorial">Editorial</button></div>
+<div class="gallery"><button class="gallery-item" data-cat="beauty" onclick="openLightbox(this)" data-src="images/portfolio-01.jpeg"><img decoding="async" src="images/portfolio-01.jpeg" alt="Работа RAVI ILI AVI" loading="eager"></button>
+<button class="gallery-item" data-cat="beauty" onclick="openLightbox(this)" data-src="images/portfolio-18.jpeg"><img decoding="async" src="images/portfolio-18.jpeg" alt="Работа RAVI ILI AVI" loading="eager"></button>
+<button class="gallery-item" data-cat="beauty" onclick="openLightbox(this)" data-src="images/portfolio-19.jpeg"><img decoding="async" src="images/portfolio-19.jpeg" alt="Работа RAVI ILI AVI" loading="eager"></button>
+<button class="gallery-item" data-cat="beauty" onclick="openLightbox(this)" data-src="images/portfolio-06.jpeg"><img decoding="async" src="images/portfolio-06.jpeg" alt="Работа RAVI ILI AVI" loading="eager"></button>
+<button class="gallery-item" data-cat="beauty" onclick="openLightbox(this)" data-src="images/portfolio-07.jpeg"><img decoding="async" src="images/portfolio-07.jpeg" alt="Работа RAVI ILI AVI" loading="eager"></button>
+<button class="gallery-item" data-cat="fantasy" onclick="openLightbox(this)" data-src="images/portfolio-02.jpeg"><img decoding="async" src="images/portfolio-02.jpeg" alt="Работа RAVI ILI AVI" loading="eager"></button>
+<button class="gallery-item" data-cat="fantasy" onclick="openLightbox(this)" data-src="images/portfolio-03.jpeg"><img decoding="async" src="images/portfolio-03.jpeg" alt="Работа RAVI ILI AVI" loading="eager"></button>
+<button class="gallery-item" data-cat="fantasy" onclick="openLightbox(this)" data-src="images/portfolio-04.jpeg"><img decoding="async" src="images/portfolio-04.jpeg" alt="Работа RAVI ILI AVI" loading="eager"></button>
+<button class="gallery-item" data-cat="fantasy" onclick="openLightbox(this)" data-src="images/portfolio-05.jpeg"><img decoding="async" src="images/portfolio-05.jpeg" alt="Работа RAVI ILI AVI" loading="eager"></button>
+<button class="gallery-item" data-cat="fantasy" onclick="openLightbox(this)" data-src="images/portfolio-14.jpeg"><img decoding="async" src="images/portfolio-14.jpeg" alt="Работа RAVI ILI AVI" loading="eager"></button>
+<button class="gallery-item" data-cat="fantasy" onclick="openLightbox(this)" data-src="images/portfolio-15.jpeg"><img decoding="async" src="images/portfolio-15.jpeg" alt="Работа RAVI ILI AVI" loading="eager"></button>
+<button class="gallery-item" data-cat="creative" onclick="openLightbox(this)" data-src="images/portfolio-08.jpeg"><img decoding="async" src="images/portfolio-08.jpeg" alt="Работа RAVI ILI AVI" loading="eager"></button>
+<button class="gallery-item" data-cat="creative" onclick="openLightbox(this)" data-src="images/portfolio-09.jpeg"><img decoding="async" src="images/portfolio-09.jpeg" alt="Работа RAVI ILI AVI" loading="eager"></button>
+<button class="gallery-item" data-cat="characters" onclick="openLightbox(this)" data-src="images/portfolio-10.jpeg"><img decoding="async" src="images/portfolio-10.jpeg" alt="Работа RAVI ILI AVI" loading="eager"></button>
+<button class="gallery-item" data-cat="characters" onclick="openLightbox(this)" data-src="images/portfolio-16.jpeg"><img decoding="async" src="images/portfolio-16.jpeg" alt="Работа RAVI ILI AVI" loading="eager"></button>
+<button class="gallery-item" data-cat="characters" onclick="openLightbox(this)" data-src="images/portfolio-17.jpeg"><img decoding="async" src="images/portfolio-17.jpeg" alt="Работа RAVI ILI AVI" loading="eager"></button>
+<button class="gallery-item" data-cat="editorial" onclick="openLightbox(this)" data-src="images/portfolio-11.jpeg"><img decoding="async" src="images/portfolio-11.jpeg" alt="Работа RAVI ILI AVI" loading="eager"></button>
+<button class="gallery-item" data-cat="editorial" onclick="openLightbox(this)" data-src="images/portfolio-12.jpeg"><img decoding="async" src="images/portfolio-12.jpeg" alt="Работа RAVI ILI AVI" loading="eager"></button>
+<button class="gallery-item" data-cat="editorial" onclick="openLightbox(this)" data-src="images/portfolio-13.jpeg"><img decoding="async" src="images/portfolio-13.jpeg" alt="Работа RAVI ILI AVI" loading="eager"></button></div></div></section>
+<section id="collab"><div class="container"><div class="eyebrow">Сотрудничество</div><h2>Что могу создать для бренда</h2><div class="cards"><div class="card"><b>UGC-ВИДЕО</b><p>Нативные ролики для социальных сетей.</p></div><div class="card"><b>BEAUTY</b><p>Макияж, демонстрация продукта и beauty-storytelling.</p></div><div class="card"><b>ТРАНСФОРМАЦИЯ</b><p>Персонажи, переходы, before/after и визуальные перевоплощения.</p></div><div class="card"><b>EDITORIAL</b><p>Концептуальные фотографии и рекламные визуалы.</p></div></div></div></section>
+<section><div class="container"><div class="eyebrow">Социальные сети</div><h2>Смотреть больше</h2><div class="socials"><a class="social" href="https://www.tiktok.com/@awrori" target="_blank"><small>TIKTOK</small><strong>@awrori</strong></a><a class="social" href="https://www.instagram.com/ravi_ili_avi" target="_blank"><small>INSTAGRAM</small><strong>@ravi_ili_avi</strong></a><a class="social" href="https://youtube.com/@raviiliavi" target="_blank"><small>YOUTUBE</small><strong>@raviiliavi</strong></a></div></div></section>
+<section id="contact" class="contact"><div class="container"><div class="eyebrow">Контакты</div><h2>Создадим что-то<br>запоминающееся.</h2><p class="lead">Открыта к сотрудничеству с beauty, fashion, cosmetics, accessories, lifestyle и креативными брендами.</p><p class="manager-contact"><span>Telegram</span> @ksenik_24 &nbsp; · &nbsp; <span>Instagram</span> @ksenik.khovanskova</p><div class="buttons"><a class="btn primary" href="https://www.instagram.com/ksenik.khovanskova" target="_blank">Instagram · @ksenik.khovanskova</a><a class="btn" href="https://t.me/ksenik_24" target="_blank">Telegram · @ksenik_24</a></div></div></section>
+<footer><div class="container">© RAVI ILI AVI · UGC & КОНТЕНТ-КРЕАТОР</div></footer>
+<div class="lightbox" id="lightbox"><button class="close" onclick="closeLightbox()">×</button><img id="lightbox-img" src="" alt=""></div>
+<script>
+function setupFilters(id, selector, attr){const root=document.getElementById(id);const buttons=root.querySelectorAll('.filter');const items=document.querySelectorAll(selector);buttons.forEach(btn=>btn.addEventListener('click',()=>{buttons.forEach(b=>b.classList.remove('active'));btn.classList.add('active');const f=btn.dataset.filter;items.forEach(i=>i.style.display=(f==='all'||i.dataset[attr]===f)?'':'none')}))}
+setupFilters('videoFilters','.video-card','vcat');setupFilters('photoFilters','.gallery-item','cat');
+function openLightbox(el){document.getElementById('lightbox-img').src=el.dataset.src;document.getElementById('lightbox').classList.add('show')}
+function closeLightbox(){document.getElementById('lightbox').classList.remove('show')}
+document.getElementById('lightbox').addEventListener('click',e=>{if(e.target.id==='lightbox')closeLightbox()})
+</script></body></html>
